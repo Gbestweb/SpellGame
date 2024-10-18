@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WordBeater</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+            background-color: rgb(49, 42, 42);
+            color: #fff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        header {
+            background-color: #6d6a6a;
+            padding: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        #seconds {
+            color: green;
+        }
+
+        .current {
+            margin: 1rem;
+            font-size: 2.5rem;
+        }
+
+        input {
+            width: 20rem;
+            padding: 5px;
+            border-radius: 3px;
+            border: none;
+            margin-bottom: 2rem;
+            outline: none;
+        }
+
+        .T_s {
+            margin-bottom: 2rem;
+        }
+
+        .instructions {
+            background-color: #6d6a6a;
+            width: 20rem;
+            margin: auto;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+
+        .instructions p {
+            font-size: small;
+        }
+
+        .instructions h5 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .message {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>WordBeater</header>
+    <div class="container">
+        <!--word and input-->
+        <div class="word">
+            <p>Type The Given Word Within <span id="seconds"> 5</span> seconds:</p>
+            <h2 class="current" id="current-word">hello</h2>
+            <form action="">
+                <input type="text" placeholder="Start typing....." id="word-input" autofocus>
+            </form>
+            <h4 id="message" class="message"></h4>
+
+            <!--Time and score colums-->
+            <div class="T_s">
+                <h3>Time Left: <span id="time">0</span></h3>
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+            <!--instructions-->
+            <div class="instructions">
+                <h5>instructions</h5>
+                <p>Type each word in the given amount of seconds to score. To play
+                    again, just type the current word. Your score will reset
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="WordBeater.js"></script>
+</body>
+
+</html>
